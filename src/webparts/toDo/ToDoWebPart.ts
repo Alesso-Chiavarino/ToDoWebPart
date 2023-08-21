@@ -3,16 +3,18 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
+  PropertyPaneDropdown,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'ToDoWebPartStrings';
-import ToDo from './components/ToDo';
+import { ToDo } from './components/ToDo';
 import { IToDoProps } from './components/IToDoProps';
 
 export interface IToDoWebPartProps {
   description: string;
+  tasksType: string;
 }
 
 export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
@@ -22,7 +24,8 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
       ToDo,
       {
         description: this.properties.description,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        tasksType: this.properties.tasksType,
       }
     );
 
@@ -50,7 +53,15 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
-                })
+                }),
+                PropertyPaneDropdown('tasksType', {
+                  label: strings.TasksTypeFieldLabel,
+                  options: [
+                    { key: 'All', text: 'All' },
+                    { key: 'Completed', text: 'Completed' },
+                    { key: 'Incomplete', text: 'Incomplete' }
+                  ]
+                }),
               ]
             }
           ]

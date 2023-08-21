@@ -1,0 +1,22 @@
+.task-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 10px #ccc;
+    }
+    &__title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    &__description {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+}

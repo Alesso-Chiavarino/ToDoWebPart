@@ -59,14 +59,6 @@ module.exports = {
         //                    but writing code is a much less important activity than reading it.
         //
         // STANDARDIZED BY:   @typescript-eslint\eslint-plugin\dist\configs\recommended.json
-        '@typescript-eslint/explicit-function-return-type': [
-          1,
-          {
-            'allowExpressions': true,
-            'allowTypedFunctionExpressions': true,
-            'allowHigherOrderFunctions': false
-          }
-        ],
         // STANDARDIZED BY:   @typescript-eslint\eslint-plugin\dist\configs\recommended.json
         // Rationale to disable: although this is a recommended rule, it is up to dev to select coding style.
         // Set to 1 (warning) or 2 (error) to enable.

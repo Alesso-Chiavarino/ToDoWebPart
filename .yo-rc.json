@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.13.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.4",
+    "libraryName": "to-do-web-part",
+    "libraryId": "88750559-8d76-4b8b-a6cb-c943b2e826f3",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "to-do-web-part",
+    "solutionShortDescription": "to-do-web-part description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

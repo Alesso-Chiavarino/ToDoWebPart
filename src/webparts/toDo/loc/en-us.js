@@ -1,9 +1,10 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Description",
-    "BasicGroupName": "Group Name",
+    "PropertyPaneDescription": "Settings for the ToDo web part",
+    "BasicGroupName": "ToDo Settings",
     "DescriptionFieldLabel": "Description Field",
     "TasksTypeFieldLabel": "Tasks Type",
+    "TasksCounterFieldLabel": "Tasks Counter",
     "AppLocalEnvironmentSharePoint": "The app is running on your local environment as SharePoint web part",
     "AppLocalEnvironmentTeams": "The app is running on your local environment as Microsoft Teams app",
     "AppLocalEnvironmentOffice": "The app is running on your local environment in office.com",

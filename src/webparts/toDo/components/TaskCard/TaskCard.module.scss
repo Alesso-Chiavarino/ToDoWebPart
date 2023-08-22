@@ -1,22 +1,36 @@
-.task-card {
+.taskCard {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
+    margin: 0;
     margin-bottom: 10px;
     background-color: #fff;
     box-shadow: 0 0 5px #ccc;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     cursor: pointer;
     &:hover {
       box-shadow: 0 0 10px #ccc;
     }
-    &__title {
+
+    .taskCard__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .taskCard__hr {
+      width: 100%;
+    }
+    .taskCard__title {
       font-size: 1.2rem;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin: 0;
     }
-    &__description {
+    .taskCard__description {
       font-size: 1rem;
-      margin-bottom: 10px;
+      margin: 0;
     }
 }

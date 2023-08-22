@@ -1,0 +1,20 @@
+.tasksList {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.taskCounter {
+    display: block;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}

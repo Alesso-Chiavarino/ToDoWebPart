@@ -16,8 +16,8 @@
     "description": { "default": "ToDo description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "ToDo",
-      "tasksType": "All"
+      "tasksType": "All",
+      "tasksCounter": true
     }
   }]
 }

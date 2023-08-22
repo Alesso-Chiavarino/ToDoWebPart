@@ -3,8 +3,8 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
+  PropertyPaneCheckbox,
   PropertyPaneDropdown,
-  PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
@@ -13,8 +13,8 @@ import { ToDo } from './components/ToDo';
 import { IToDoProps } from './components/IToDoProps';
 
 export interface IToDoWebPartProps {
-  description: string;
   tasksType: string;
+  tasksCounter: boolean;
 }
 
 export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
@@ -23,9 +23,9 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
     const element: React.ReactElement<IToDoProps> = React.createElement(
       ToDo,
       {
-        description: this.properties.description,
         userDisplayName: this.context.pageContext.user.displayName,
         tasksType: this.properties.tasksType,
+        tasksCounter: this.properties.tasksCounter,
       }
     );
 
@@ -51,8 +51,8 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneCheckbox('tasksCounter', {
+                  text: strings.TasksCounterFieldLabel
                 }),
                 PropertyPaneDropdown('tasksType', {
                   label: strings.TasksTypeFieldLabel,
